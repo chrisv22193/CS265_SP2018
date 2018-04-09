@@ -1,0 +1,20 @@
+Notes:
+1. To create a new node holding a value, you will want to do something to the effect of:
+
+	SNode<T> *new_node = new SNode<T>(value);
+	
+2. Setting a node's (a) next node to another node (b) should be done like:
+
+	a->setNextNode(b);
+	
+3. Setting a node's (a) pointer to the node's next node should be done like:
+
+	a = a->getNextNode();
+	 
+4. Setting a variable (assumed as type T) to a node's (b) current data value.
+
+	a = b->getData()
+	
+5. Set a node's (a) next node to another node's (b) next node should be done like:
+
+	a->setNextNode(b->getNextNode());
