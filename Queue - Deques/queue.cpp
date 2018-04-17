@@ -76,18 +76,18 @@ template <class T> void Queue<T>::enqueue(T newItem)  // same as push_back
 
 template <class T> T Queue<T>::pop_front()
 {
+	T value;
 	if ( num_items > 0 )
 	{
-		T value = head->getValue();
+		value = head->getValue();
 		DListNode<T> *old_head = head;
 		head = head->getNextNode();
 		old_head->setNextNode(nullptr);
 		if ( head != nullptr ) head->setPreviousNode(nullptr);
 		num_items--;
 		delete old_head;
-		return value;
 	}
-	return (T)nullptr;
+	return value;
 }
 
 template <class T> T Queue<T>::dequeue() // same as pop front

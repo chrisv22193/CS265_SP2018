@@ -76,6 +76,7 @@ template <class T> void Deque<T>::enqueue_back(T newItem)  // same as push_back
 
 template <class T> T Deque<T>::pop_front()
 {
+	T value;
 	if ( num_items > 0 )
 	{
 		T value = head->getValue();
@@ -88,7 +89,7 @@ template <class T> T Deque<T>::pop_front()
 		delete old_head;
 		return value;
 	}
-	return (T)nullptr;
+	return value;
 }
 
 template <class T> T Deque<T>::dequeue_front() // same as pop front
@@ -123,6 +124,7 @@ template <class T> void Deque<T>::enqueue_front(T newItem)  // same as push_fron
 
 template <class T> T Deque<T>::pop_back()
 {
+	T value;
 	if ( num_items > 0 )
 	{
 		T value = tail->getValue();
@@ -135,7 +137,7 @@ template <class T> T Deque<T>::pop_back()
 		delete old_tail;
 		return value;
 	}
-	return (T)nullptr;
+	return value;
 }
 
 template <class T> T Deque<T>::dequeue_back() // same as pop_back
