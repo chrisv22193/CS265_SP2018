@@ -1,3 +1,32 @@
+// The format of the text file to read must be as follows:
+
+// d
+// n
+// vertice labels
+// edge order pairs
+//
+// where:
+// d = D or d to specify graph is directed graph, any other characters deault to undirected graph
+// n = number of vertices in graph
+// vertice labels - labels for the graph vertices as single characters
+// edge order pairs - in the format of: start end
+// where start is the vertex edge starts and end is vertex where edge ends
+//
+// example of a 6 vertice directed graph in the next comment block:
+// D
+// 6
+// 0 1 2 3 4 5
+// 0 1
+// 0 2
+// 0 5
+// 1 2
+// 1 4
+// 2 4
+// 2 5
+// 3 2
+// 4 3
+// 4 5
+//
 #include <iostream>
 #include <fstream>
 #include "graph.h"
