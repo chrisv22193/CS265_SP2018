@@ -58,5 +58,6 @@ class Graph
         void dfs()
         {
             //TODO: Programming assignment
-        };
+        }
+};
 #endif
