@@ -29,8 +29,9 @@
 //
 #include <iostream>
 #include <fstream>
-#include "graph.h"
 using namespace std;
+#include "graph.h"
+#include "stack.h"
 
 int main(int argc, char* argv[])
 {
@@ -67,10 +68,13 @@ int main(int argc, char* argv[])
 
 		do
 		{
-			bool readData = inFile >> start >> end;
-			if (readData==false) break;
+			inFile >> start;
+			if ( inFile.eof() ) break;
+			inFile >> end;
+			if ( inFile.eof() ) break;
+			cout << "(" << start << ", " << end << ")" << endl;
 			theGraph->addEdge(start,end);
-		} while(true);
+		} while( true );
         	
 		inFile.close();
 		cout << "Depth First Search Results: ";
@@ -83,4 +87,3 @@ int main(int argc, char* argv[])
 		return 2;
 	} 
 }
-
